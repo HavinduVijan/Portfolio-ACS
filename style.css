@@ -12,10 +12,13 @@ body {
 
 /* Header styles */
 header {
-    background-color: #333;
-    color: #fff;
     text-align: center;
     padding: 20px;
+}
+
+.navbar{
+    background-color: #333;
+    color: #fff;
 }
 
 h1 {
