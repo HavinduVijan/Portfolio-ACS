@@ -17,7 +17,7 @@ header {
 }
 
 .navbar{
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
 }
 
@@ -91,4 +91,25 @@ p {
 .nav-links a:hover {
     background-color: #575757;
     border-radius: 5px;
+}
+
+body {
+    height: 100%;
+    overflow: scroll;
+}
+.footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: rgb(0, 0, 0);
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+#phone{
+    padding-left: 10px;
 }
