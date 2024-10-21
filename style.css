@@ -6,7 +6,7 @@ body, h1, p {
 
 /* Set background color and font family */
 body {
-    background-color: #f9f9f9;
+    background-color: #000000;
     font-family: Arial, sans-serif;
 }
 
@@ -16,15 +16,9 @@ header {
     padding: 20px;
 }
 
-.navbar{
-    background-color: #000000;
-    color: #fff;
-}
-
 h1 {
     font-family: sans-serif;
-    color: #dbce1b;
-    
+    color: #ffffff;
     font-weight:770;
     font-size: 40px;
     margin-top: 40px;
@@ -36,7 +30,6 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #edf7fa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 35px;
     margin-bottom: 90px;
@@ -45,6 +38,7 @@ section {
 
 h2 {
     font-size: 30px;
+    color: #8ea318;
     font-family: sans-serif;
     margin-bottom: 30px;
 }
@@ -60,7 +54,7 @@ p {
 
 /* Navigation bar styles */
 .navbar {
-    background-color: #333;
+    background-color:rgb(31, 26, 26);
     color: #fff;
     padding: 1rem 0;
 }
@@ -72,6 +66,7 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+    
 }
 
 .logo {
@@ -112,7 +107,7 @@ body {
     left: 0;
     right: 0;
     padding: 2rem;
-    background: rgb(0, 0, 0);
+    background: rgb(31, 26, 26);
     color: white;
     font-weight: 500;
     display: flex;
