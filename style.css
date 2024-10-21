@@ -129,7 +129,7 @@ input[type=text], select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
     border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
+    border-radius: 10px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 6px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
@@ -137,27 +137,27 @@ input[type=text], select, textarea {
 }
   /* Style the submit button with a specific background color etc */
 input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
 }
   /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #20c028;
 }
   /* Add a background color and some padding around the form */
 .contact-form {
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: #f2f2f2;
     padding: 20px;
 }
 
 /* Style the form element with a border around it */
 form {
-    border: 4px solid #f1f1f1;
+    border: 8px solid #f1f1f1;
+    border-radius: 20px;
 }
 
   /* Add some padding and a grey background color to containers */
@@ -171,7 +171,6 @@ input[type=text], input[type=submit] {
     padding: 12px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
@@ -182,7 +181,7 @@ input[type=checkbox] {
 
   /* Style the submit button */
 input[type=submit] {
-    background-color: #04AA6D;
+    background-color: #000000;
     color: white;
     border: none;
 }
