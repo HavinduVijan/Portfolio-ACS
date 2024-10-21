@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">H VIJAN</a>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#blogs">BLOGS</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1>CONTACT US</h1>
+    </header>
+    <section>
+        <div class="contact-form">
+            <form action="action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <input type="submit" value="Submit"></form>
+        </div>
+    </section>
+    <section>
+        <form action="action_page.php">
+            <div class="newsletter-form">
+                <h2>Subscribe to our Newsletter</h2>
+                <p>Lorem ipsum..</p>
+            </div>
+            <div class="newsletter-form" style="background-color:white">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="text" placeholder="Email address" name="mail" required>
+                <label>
+                    <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                </label>
+            </div>
+            <div class="newsletter-form">
+                <input type="submit" value="Subscribe">
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer">
+            &copy;<span> 2024. All rights reserved by H VIJAN</span>
+            <div id="icons-3">
+                <i class="fa-solid fa-phone" id="phone"></i>
+                <i class="fa-solid fa-envelope" id="mail"></i>
+                <i class="fa-solid fa-location-dot" id="location"></i> 
+            </div>
+        </div>
+    </footer>
+</body> 
+</html>
