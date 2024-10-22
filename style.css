@@ -86,7 +86,7 @@ p {
     margin: 0;
 }
 
-.nav-links a {
+.nav-links a{
     text-decoration:none;
     color: #fff;
     padding: 0.5rem 1rem;
@@ -94,7 +94,7 @@ p {
 }
 
 .nav-links a:hover {
-    background-color: #6b602b;
+    background-color: #4b4943;
     border-radius: 9px;
 }
 
