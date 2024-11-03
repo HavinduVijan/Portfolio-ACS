@@ -1,3 +1,7 @@
+
+/*About Page------------------------------------------------------------------*/
+
+
 /* Reset default margin and padding */
 body, h1, p {
     margin: 0;
@@ -37,7 +41,7 @@ section {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 25px;
     color: #8ea318;
     font-family: sans-serif;
     margin-bottom: 30px;
@@ -47,7 +51,7 @@ p {
     font-size: 20px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #666;
+    color: #c0b6b6;
     margin-bottom: 25px;
     
 }
@@ -74,6 +78,10 @@ p {
     font-weight: bold;
     text-decoration: none;
     color: #fff;
+}
+
+.yellow {
+    color: yellow;
 }
 
 .nav-links {
@@ -122,7 +130,7 @@ body {
     font-weight: bold;
 }
 
-/*contact html-------------------------------------------------------------------------------------------------------------------------
+/*Contact Page-------------------------------------------------------------------------*/
 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
