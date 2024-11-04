@@ -193,6 +193,7 @@ input[type=submit]:hover {
 /* Hero Section */
 #home {
     background: linear-gradient(135deg, #6c5ce7, #a363d9);
+    background-image:url(IMG/bg1.jpg);
     color: white;
     text-align: center;
 }
