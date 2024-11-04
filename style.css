@@ -13,18 +13,19 @@
 /* Set background color and font family */
 body {
     background-color: #000000;
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     line-height: 1.6;
 }
 
 
 h1 {
-    font-family: sans-serif;
     color: #ffffff;
     font-weight:770;
     font-size: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
+    text-transform: uppercase; /* Adding text effect */
+    text-shadow: 2px 2px 4px rgba(250, 250, 250, 0.5); /* Adding text shadow */
 }
 
 /* Main content styles */
@@ -36,12 +37,17 @@ section {
 
 }
 
+div p { /*Relational Selector*/
+    color: rgb(112, 112, 117);
+    font-weight:500;
+}
+
 h2 {
     font-size: 30px;
     color: #65665d;
-    font-family: sans-serif;
     margin-bottom: 30px;
     text-align: center;
+    
 }
 
 
@@ -51,7 +57,7 @@ nav {
     width: 100%;
     background: rgba(0, 0, 0, 0.95);
     padding: 1rem 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(151, 146, 146, 0.1); /* Adding shadow */
     z-index: 1000;
 }
 
@@ -88,15 +94,32 @@ nav {
     gap: 1rem;
 }
 
-.nav-links a{
+.nav-links li:last-child a { /*structural selector*/
+    background-color: yellowgreen;
+    color: #000000;
+    border-radius: 20px;
+    padding: 0.5rem 1.2rem;
+}
+
+.nav-links li:not(:last-child) a { /*Negation Psuedo Class*/
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+
+.nav-links a{  /*Child combinator*/
     text-decoration:none;
     color: #fff;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s;
 }
 
-.nav-links a:hover {
-    background-color: #4b4943;
+.nav-links li a { /*Relational Selector*/
+    color: wheat;
+}
+
+.nav-links a:hover { /* User action Pseudo Class*/
+    background-color: rgba(75, 73, 67, 0.7); /* Adding semi-transparent background */
     border-radius: 9px;
 }
 
@@ -112,6 +135,7 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 0.2rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Adding shadow to footer */
 }
 #phone,#mail,#location{
     padding-left: 10px;
@@ -123,10 +147,10 @@ nav {
 /*Contact Page-------------------------------------------------------------------------*/
 
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
+input[type=text], select, textarea { /*attribute selector*/
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
+    border: 1px solid gray; /* Gray border */
     border-radius: 10px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 6px; /* Add a top margin */
@@ -134,22 +158,34 @@ input[type=text], select, textarea {
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
   /* Style the submit button with a specific background color etc */
-input[type=submit] {
+input[type=submit] { /*attribute selector*/
     color: rgb(255, 255, 255);
     padding: 12px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
 }
+input:not([type="submit"]) { /*Negation Psuedo class*/
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* Select all input elements with the type 'text' and the placeholder attribute */
+input[type="text"][placeholder] { /*attribute selector*/
+    border: 1px solid gray;
+}
+    
   /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-    background-color: #20c028;
+    background-color: rgba(83, 82, 78, 0.7); /* Adding semi-transparent background */
+    opacity: 0.8; /* Text effect */
 }
   /* Add a background color and some padding around the form */
 .contact-form {
     border-radius: 20px;
     background-color: #f2f2f2;
     padding: 20px;
+    font-family: "Trirong", serif; /*Google font*/
 }
 
 /* Style the form element with a border around it */
@@ -162,6 +198,7 @@ form {
 .newsletter-form {
     padding: 20px;
     background-color: #f1f1f1;
+    font-family: "Trirong", serif; /*Google font*/
 }  
   /* Style the input elements and the submit button */
 input[type=text], input[type=submit] {
@@ -170,6 +207,12 @@ input[type=text], input[type=submit] {
     margin: 8px 0;
     display: inline-block;
     box-sizing: border-box;
+}
+
+input[type=text]:hover, /*User Action Pseudo Class*/
+select:hover, 
+textarea:hover {
+    border-color: #0984e3;
 }
 
   /* Add margins to the checkbox */
@@ -188,6 +231,16 @@ input[type=submit]:hover {
     opacity: 0.8;
 }
 
+input:invalid { /*Validity Psuedo Class*/
+    background-color:rgba(216, 13, 148, 0.144); /* Green border for valid input */
+}
+
+input:optional{ /* Validity Psuedo Class*/
+    background-color: #babbab6b;
+}
+
+
+
 /*Home Page-----------------------------------------------------------------------------------*/
 
 /* Hero Section */
@@ -198,14 +251,18 @@ input[type=submit]:hover {
     text-align: center;
 }
 
-.hero h1 {
+.hero h1 { 	/*Child combinator*/
     font-size: 3.5rem;
     margin-bottom: 1rem;
 }
 
-.hero p {
+.hero p { 	/*Child combinator*/
     font-size: 1.5rem;
     opacity: 0.9;
+}
+
+.hero p::first-line{ /*Pseudo Element*/
+    color:yellow
 }
 
   /* About Section */
@@ -215,6 +272,22 @@ input[type=submit]:hover {
 }
 .about-details p {
     color: #919599;
+    font-family:'Trebuchet MS';
+    text-transform: capitalize; /* Adding text effect */
+}
+
+.home-about:first-of-type { /*Structural Selectors*/
+    font-size: 1.1rem;
+    color: #504444;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align:justify;
+}
+
+h3::first-letter{ /*Pseudo Element*/
+    text-transform: uppercase;
+    color:rgb(223, 223, 73);
+    font-size: 30px;
 }
 
 .skills {
@@ -222,6 +295,16 @@ input[type=submit]:hover {
     gap: 1rem;
     flex-wrap:wrap;
     margin-top: 2rem;
+}
+
+.skill:nth-child(3n) { /*Structural selector*/
+    background: #6c8caa;
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+}
+
+.skill:nth-child(3n):hover { /* Nth Pseudo class*/
+    transform: rotate(0) scale(1.1);
 }
 
 .skill {
@@ -237,6 +320,7 @@ input[type=submit]:hover {
     margin-bottom: .8rem;
     margin-top: 2.5rem;
     color: rgb(212, 219, 219);
+    text-transform: capitalize; /* Adding text effect */
 }
 
   /* Projects Section */
@@ -291,6 +375,10 @@ input[type=submit]:hover {
     margin-bottom: 1.5rem;
 }
 
+.project-card:nth-child(even){ /*Nth Psuedo Class*/
+    border-radius: 40px;
+}
+
 .project-links {
     display: flex;
     gap: 1rem;
@@ -333,10 +421,13 @@ input[type=submit]:hover {
     transition: transform 0.3s ease;
 }
 
-.blog-card:hover {
+.blog-card:hover {  /*User Action Pseudo Class*/
     transform: translateY(-5px);
 }
 
+.blog-card:nth-child(odd){ /*Nth Psuedo Class*/
+    background-color: #e0e0dd;
+}
 .blog-image {
     width: 100%;
     height: 300px;
@@ -395,6 +486,6 @@ input[type=submit]:hover {
 }
 
 .blog-btn:hover {
-    background: #0769b5;
+    background-color: rgba(104, 104, 209, 0.7); /* Adding semi-transparent background */
     transform: translateX(5px);
 }
