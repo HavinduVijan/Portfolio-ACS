@@ -12,7 +12,7 @@
 
 /* Set background color and font family */
 body {
-    background-color: #d8d5d5;
+    background-color: #000000;
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
@@ -193,7 +193,7 @@ input[type=submit]:hover {
 /* Hero Section */
 #home {
     background: linear-gradient(135deg, #6c5ce7, #a363d9);
-    background-image:url(IMG/bg1.jpg);
+    background-image:url(IMG/home-background.jpg);
     color: white;
     text-align: center;
 }
@@ -212,6 +212,9 @@ input[type=submit]:hover {
 #about {
     background: #f9f9f9;
     text-align: center;
+}
+.about-details p {
+    color: #919599;
 }
 
 .skills {
@@ -233,7 +236,7 @@ input[type=submit]:hover {
     font-size: 1.3rem;
     margin-bottom: .8rem;
     margin-top: 2.5rem;
-    color: rgb(13, 26, 27);
+    color: rgb(212, 219, 219);
 }
 
   /* Projects Section */
@@ -312,7 +315,7 @@ input[type=submit]:hover {
     background: #ffffff;
 }
 #blogs {
-    background: #f9f9f9;
+    background: #000000;
 }
 
 .blog-grid {
@@ -324,7 +327,7 @@ input[type=submit]:hover {
 
 .blog-card {
     background: white;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
