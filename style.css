@@ -1,7 +1,3 @@
-
-/*About Page------------------------------------------------------------------*/
-
-
 /* Reset default margin and padding */
 * {
     margin: 0;
@@ -30,7 +26,7 @@ h1 {
 
 /* Main content styles */
 section {
-    min-height: 100vh;
+    min-height:auto;
     padding: 6rem 2rem;
     align-items: center;
     justify-content: center;
@@ -49,9 +45,15 @@ h2 {
     text-align: center;
     
 }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    
+}
 
+/* Navigation bar styles-------------------------------------------------------- */
 
-/* Navigation bar styles */
 nav {
     position: fixed;
     width: 100%;
@@ -70,12 +72,6 @@ nav {
     padding: 0 2rem;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    
-}
 @keyframes pulse {
     0%, 100% {
         transform: scale(1); /* Normal size */
@@ -93,7 +89,7 @@ nav {
 }
 
 .yellow {
-    color: yellow;
+    color: rgb(206, 206, 40);
 }
 
 .nav-links {
@@ -131,6 +127,8 @@ nav {
     border-radius: 9px;
 }
 
+/*Footer--------------------------------------------------------------------------------*/
+
 .footer {
     bottom: 0;
     left: 0;
@@ -167,16 +165,19 @@ input[type=text], select, textarea { /*attribute selector*/
 }
   /* Style the submit button with a specific background color etc */
 input[type=submit] { /*attribute selector*/
-    color: rgb(255, 255, 255);
+    color: rgb(236, 236, 236);
     padding: 12px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
 }
-input:not([type="submit"]) { /*Negation Psuedo class*/
-    background-color: rgb(255, 255, 255);
-}
 
+input:not([type="submit"]) { /*Negation Psuedo class*/
+    background-color: rgb(236, 236, 236);
+}
+#subject{
+    background-color: #f5ebeba9;
+}
 
 /* Select all input elements with the type 'text' and the placeholder attribute */
 input[type="text"][placeholder] { /*attribute selector*/
@@ -191,22 +192,27 @@ input[type=submit]:hover {
   /* Add a background color and some padding around the form */
 .contact-form {
     border-radius: 20px;
-    background-color: #f2f2f2;
-    padding: 20px;
+    background-color: #66272700;
     font-family: "Trirong", serif; /*Google font*/
+    width: 70%;
+    margin:auto;
+    color: #c3c3c4;
 }
 
 /* Style the form element with a border around it */
 form {
-    border: 8px solid #f1f1f1;
     border-radius: 20px;
+    padding: 20px
 }
 
   /* Add some padding and a grey background color to containers */
 .newsletter-form {
-    padding: 20px;
-    background-color: #f1f1f1;
+    background-color: #000000;
     font-family: "Trirong", serif; /*Google font*/
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+    color: #8b8585;
 }  
   /* Style the input elements and the submit button */
 input[type=text], input[type=submit] {
@@ -247,17 +253,16 @@ input:optional{ /* Validity Psuedo Class*/
     background-color: #babbab6b;
 }
 
-
-
 /*Home Page-----------------------------------------------------------------------------------*/
 
 /* Hero Section */
 #home {
-    background: linear-gradient(135deg, #6c5ce7, #a363d9); /*gradient*/
-    background-image:url(IMG/home-background.jpg);
+    background: linear-gradient(135deg, #000000, #2c3124); /*gradient*/
     color: white;
-    text-align: center;
+    text-align:center;
+    
 }
+
 /* Keyframes for fade-in and slide-up animation */
 @keyframes fadeInUp {
     0% {
@@ -285,7 +290,13 @@ input:optional{ /* Validity Psuedo Class*/
     color:yellow
 }
 
-  /* About Section */
+.icon1{
+    font-size: 28px;
+    margin: 8px ;
+    cursor: pointer;
+}
+/* About Section -------------------------------------------------------------------------------*/
+
 #about {
     background: #f9f9f9;
     text-align: center;
@@ -315,6 +326,7 @@ h3::first-letter{ /*Pseudo Element*/
     gap: 1rem;
     flex-wrap:wrap;
     margin-top: 2rem;
+    justify-content:center;
 }
 
 .skill:nth-child(3n) { /*Structural selector*/
@@ -344,7 +356,8 @@ h3::first-letter{ /*Pseudo Element*/
     text-transform: capitalize; /* Adding text effect */
 }
 
-  /* Projects Section */
+/* Projects Section ---------------------------------------------------------------------------*/
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -421,6 +434,7 @@ h3::first-letter{ /*Pseudo Element*/
 }
 
 /*Blog Page----------------------------------------------------------------------------------------------*/
+
 #home-blogs {
     background: #ffffff;
 }
@@ -511,4 +525,220 @@ h3::first-letter{ /*Pseudo Element*/
 .blog-btn:hover {
     background-color: rgba(104, 104, 209, 0.7); /* Adding semi-transparent background */
     transform: translateX(5px);
+}
+
+/*Media Quary-------------------------------------------------------------------------------*/
+
+/* Mobile Devices (up to 767px) */
+@media screen and (max-width: 767px) {
+    /* Navigation */
+    .nav-content {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        gap: 0.8rem;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 0.8rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 28px;
+        margin: 20px 0;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    /* Sections */
+    section {
+        padding: 4rem 1rem;
+        min-height: auto;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* About Section */
+    .home-about:first-of-type {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .skills {
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .skill {
+        width: calc(50% - 0.8rem);
+        text-align: center;
+    }
+
+    /* Projects Section */
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Blog Section */
+    .blog-grid {
+        gap: 2rem;
+    }
+
+    .blog-image {
+        height: 200px;
+    }
+
+    .blog-content {
+        padding: 1.5rem;
+    }
+
+    .blog-content h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Contact Forms */
+    .contact-form,
+    .newsletter-form {
+        padding: 1rem;
+    }
+
+    form {
+        border-width: 4px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 1.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    #phone, #mail, #location {
+        padding-left: 0;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Tablet Devices (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Navigation */
+    .nav-content {
+        padding: 0 1.5rem;
+    }
+
+    .nav-links {
+        gap: 0.8rem;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    /* Sections */
+    section {
+        padding: 5rem 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    /* About Section */
+    .home-about:first-of-type {
+        max-width: 600px;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .skill {
+        width: calc(33.33% - 1rem);
+    }
+
+    /* Projects Section */
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .project-grid.detailed {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Blog Section */
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .blog-image {
+        height: 250px;
+    }
+
+    /* Forms */
+    .contact-form,
+    .newsletter-form {
+        padding: 1.5rem;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 1.5rem;
+        max-width: 90%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
 }
