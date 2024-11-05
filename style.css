@@ -13,7 +13,7 @@ body {
     line-height: 1.6;
 }
 
-
+/* Primary heading styles with text effects and spacing */
 h1 {
     color: #ffffff;
     font-weight:770;
@@ -45,6 +45,7 @@ h2 {
     text-align: center;
     
 }
+/* Main container for content centering and width control */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -72,6 +73,7 @@ nav {
     padding: 0 2rem;
 }
 
+/* Logo animation keyframes */
 @keyframes pulse {
     0%, 100% {
         transform: scale(1); /* Normal size */
@@ -80,7 +82,7 @@ nav {
         transform: scale(1.1); /* Slightly enlarged */
     }
 }
-.logo {
+.logo { /* Logo styling with animation */
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
@@ -110,7 +112,7 @@ nav {
     padding-bottom: 0.5rem;
 }
 
-
+/* Navigation link styling */
 .nav-links a{  /*Child combinator*/
     text-decoration:none;
     color: #fff;
@@ -122,6 +124,7 @@ nav {
     color: wheat;
 }
 
+/* Navigation hover effect */
 .nav-links a:hover { /* User action Pseudo Class*/
     background-color: rgba(75, 73, 67, 0.7); /* Adding semi-transparent background */
     border-radius: 9px;
@@ -146,24 +149,25 @@ nav {
 #phone,#mail,#location{
     padding-left: 10px;
 }
+
 #about-bold{
     font-weight: bold;
 }
 
 /*Contact Page-------------------------------------------------------------------------*/
 
-/* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea { /*attribute selector*/
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid gray; /* Gray border */
-    border-radius: 10px; /* Rounded borders */
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid gray; 
+    border-radius: 10px; 
     box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
+    margin-top: 6px; 
+    margin-bottom: 16px; 
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
-  /* Style the submit button with a specific background color etc */
+
+/* Submit button styling */
 input[type=submit] { /*attribute selector*/
     color: rgb(236, 236, 236);
     padding: 12px 20px;
@@ -175,16 +179,17 @@ input[type=submit] { /*attribute selector*/
 input:not([type="submit"]) { /*Negation Psuedo class*/
     background-color: rgb(236, 236, 236);
 }
+
 #subject{
     background-color: #f5ebeba9;
 }
 
-/* Select all input elements with the type 'text' and the placeholder attribute */
+
 input[type="text"][placeholder] { /*attribute selector*/
     border: 1px solid gray;
 }
     
-  /* When moving the mouse over the submit button, add a darker green color */
+
 input[type=submit]:hover {
     background-color: rgba(83, 82, 78, 0.7); /* Adding semi-transparent background */
     opacity: 0.8; /* Text effect */
@@ -241,6 +246,7 @@ input[type=submit] {
     border: none;
 }
 
+/* Submit button hover effect */
 input[type=submit]:hover {
     opacity: 0.8;
 }
@@ -263,7 +269,7 @@ input:optional{ /* Validity Psuedo Class*/
     
 }
 
-/* Keyframes for fade-in and slide-up animation */
+/* Fade-in animation for hero content */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -274,6 +280,7 @@ input:optional{ /* Validity Psuedo Class*/
         transform: translateY(0); /* End at original position */
     }
 }
+
 .hero h1 { 	/*Child combinator*/
     font-size: 3.5rem;
     margin-bottom: 1rem;
@@ -284,8 +291,10 @@ input:optional{ /* Validity Psuedo Class*/
 .hero p { 	/*Child combinator*/
     font-size: 1.5rem;
     opacity: 0.9;
+    /* Sets the transparency level of the element to 90%, making it slightly see-through while still retaining visibility */
 }
 
+/* First line of hero paragraph */
 .hero p::first-line{ /*Pseudo Element*/
     color:yellow
 }
@@ -307,6 +316,7 @@ input:optional{ /* Validity Psuedo Class*/
     text-transform: capitalize; /* Adding text effect */
 }
 
+/* First paragraph in about section */
 .home-about:first-of-type { /*Structural Selectors*/
     font-size: 1.1rem;
     color: #504444;
@@ -315,6 +325,7 @@ input:optional{ /* Validity Psuedo Class*/
     text-align:justify;
 }
 
+/* First letter styling for headings */
 h3::first-letter{ /*Pseudo Element*/
     text-transform: uppercase;
     color:rgb(223, 223, 73);
@@ -324,17 +335,19 @@ h3::first-letter{ /*Pseudo Element*/
 .skills {
     display:flex;
     gap: 1rem;
-    flex-wrap:wrap;
+    flex-wrap:wrap; /* Allows flex items to wrap onto multiple lines if they cannot fit in a single line, maintaining a responsive layout */
     margin-top: 2rem;
     justify-content:center;
 }
 
+/* Every third skill styling */
 .skill:nth-child(3n) { /*Structural selector*/
     background: #6c8caa;
     transform: rotate(-2deg);
     transition: transform 0.3s ease;
 }
 
+/* Hover effect for every third skill */
 .skill:nth-child(3n):hover { /* Nth Pseudo class*/
     transform: rotate(0) scale(1.1);
 }
@@ -358,6 +371,7 @@ h3::first-letter{ /*Pseudo Element*/
 
 /* Projects Section ---------------------------------------------------------------------------*/
 
+/* Project grid layout */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -375,6 +389,7 @@ h3::first-letter{ /*Pseudo Element*/
 
 .project-card:hover {
     transform: translateY(-5px);
+    /* Moves the element 5 pixels upwards along the Y-axis, creating a lifting effect */
 }
 
 .project-grid.detailed {
@@ -383,7 +398,7 @@ h3::first-letter{ /*Pseudo Element*/
 
 .project-image {
     margin: -2rem -2rem 1.5rem -2rem;
-    overflow: hidden;
+    overflow: hidden;  /* Hides any content that overflows the bounds of the element, preventing scrolling and clipping any excess content */
     border-radius: 10px 10px 0 0;
 }
 
@@ -393,10 +408,12 @@ h3::first-letter{ /*Pseudo Element*/
     height: auto;
     display: block;
     transition: transform 0.3s ease;
+    /* Applies a smooth transition effect to the 'transform' property over 0.3 seconds with an 'ease' timing function */
 }
 
+/* Project image hover effect */
 .project-card:hover .project-image img {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Scales the element to 105% of its original size, creating a zoom effect */
 }
 
 .project-content h3 {
@@ -410,6 +427,7 @@ h3::first-letter{ /*Pseudo Element*/
     margin-bottom: 1.5rem;
 }
 
+/* Even-numbered project cards */
 .project-card:nth-child(even){ /*Nth Psuedo Class*/
     border-radius: 40px;
 }
@@ -420,7 +438,7 @@ h3::first-letter{ /*Pseudo Element*/
 }
 
 .project-btn {
-    display: inline-block;
+    display: inline-block; /* Allows the element to retain block-level properties (e.g., width and height) but flow inline with other elements */
     padding: 0.5rem 1rem;
     background: #0984e3;
     color: white;
@@ -442,10 +460,11 @@ h3::first-letter{ /*Pseudo Element*/
     background:linear-gradient(black,white); /*gradient*/
 }
 
+/* Blog grid layout */
 .blog-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    display: grid; /* Creates a grid container, enabling grid layout for direct child elements */
+    grid-template-columns: 1fr; /*creating flexible columns*/
+    gap: 3rem; /*spac between grid item*/
     margin-top: 2rem;
 }
 
@@ -462,6 +481,7 @@ h3::first-letter{ /*Pseudo Element*/
     transform: translateY(-5px);
 }
 
+/* Odd-numbered blog cards */
 .blog-card:nth-child(odd){ /*Nth Psuedo Class*/
     background-color: #e0e0dd;
 }
@@ -487,7 +507,7 @@ h3::first-letter{ /*Pseudo Element*/
 }
 
 .blog-meta {
-    display: flex;
+    display: flex; /* Enables Flexbox layout, allowing flexible alignment and spacing for child elements */
     gap: 1rem;
     margin-bottom: 1rem;
     font-size: 0.9rem;
@@ -531,7 +551,7 @@ h3::first-letter{ /*Pseudo Element*/
 
 /* Mobile Devices (up to 767px) */
 @media screen and (max-width: 767px) {
-    /* Navigation */
+
     .nav-content {
         flex-direction: column;
         padding: 0.5rem;
@@ -554,7 +574,7 @@ h3::first-letter{ /*Pseudo Element*/
         margin-bottom: 1rem;
     }
 
-    /* Typography */
+
     h1 {
         font-size: 28px;
         margin: 20px 0;
@@ -569,13 +589,11 @@ h3::first-letter{ /*Pseudo Element*/
         font-size: 20px;
     }
 
-    /* Sections */
     section {
         padding: 4rem 1rem;
         min-height: auto;
     }
 
-    /* Hero Section */
     .hero h1 {
         font-size: 2rem;
     }
@@ -584,7 +602,6 @@ h3::first-letter{ /*Pseudo Element*/
         font-size: 1.1rem;
     }
 
-    /* About Section */
     .home-about:first-of-type {
         font-size: 1rem;
         padding: 0 1rem;
@@ -600,7 +617,6 @@ h3::first-letter{ /*Pseudo Element*/
         text-align: center;
     }
 
-    /* Projects Section */
     .project-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -614,7 +630,6 @@ h3::first-letter{ /*Pseudo Element*/
         font-size: 1.3rem;
     }
 
-    /* Blog Section */
     .blog-grid {
         gap: 2rem;
     }
@@ -631,7 +646,6 @@ h3::first-letter{ /*Pseudo Element*/
         font-size: 1.4rem;
     }
 
-    /* Contact Forms */
     .contact-form,
     .newsletter-form {
         padding: 1rem;
@@ -666,7 +680,6 @@ h3::first-letter{ /*Pseudo Element*/
         gap: 0.8rem;
     }
 
-    /* Typography */
     h1 {
         font-size: 34px;
     }
@@ -680,7 +693,6 @@ h3::first-letter{ /*Pseudo Element*/
         padding: 5rem 1.5rem;
     }
 
-    /* Hero Section */
     .hero h1 {
         font-size: 2.8rem;
     }
@@ -722,7 +734,6 @@ h3::first-letter{ /*Pseudo Element*/
         height: 250px;
     }
 
-    /* Forms */
     .contact-form,
     .newsletter-form {
         padding: 1.5rem;
@@ -730,7 +741,6 @@ h3::first-letter{ /*Pseudo Element*/
         margin: 0 auto;
     }
 
-    /* Container */
     .container {
         padding: 0 1.5rem;
         max-width: 90%;
