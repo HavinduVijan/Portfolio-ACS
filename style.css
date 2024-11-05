@@ -33,7 +33,7 @@ section {
 
 }
 
-div p { /*Relational Selector*/
+div p { /*Relational Selector- CSS selector that targets elements based on their relationship to other elements in the HTML structure. it can select child, descendant, adjacent sibling, or general sibling elements.*/
     color: rgb(112, 112, 117);
     font-weight:500;
 }
@@ -100,7 +100,7 @@ nav {
     gap: 1rem;
 }
 
-.nav-links li:last-child a { /*structural selector*/
+.nav-links li:last-child a { /*Structural Selector-A type of CSS selector that selects elements based on their position or structure within the document.*/
     background-color: yellowgreen;
     color: #000000;
     border-radius: 20px;
@@ -125,8 +125,8 @@ nav {
 }
 
 /* Navigation hover effect */
-.nav-links a:hover { /* User action Pseudo Class*/
-    background-color: rgba(75, 73, 67, 0.7); /* Adding semi-transparent background */
+.nav-links a:hover { /* User action Pseudo Class-CSS selector that applies styles based on user interactions with an element, such as hovering over it or focusing on it. */
+    background-color: rgba(75, 73, 67, 0.7); /*semi-transparent background */
     border-radius: 9px;
 }
 
@@ -156,7 +156,7 @@ nav {
 
 /*Contact Page-------------------------------------------------------------------------*/
 
-input[type=text], select, textarea { /*attribute selector*/
+input[type=text], select, textarea { /*attribute selector-CSS selector that targets elements based on the presence or value of a specific attribute.*/
     width: 100%;
     padding: 12px; 
     border: 1px solid gray; 
@@ -164,7 +164,7 @@ input[type=text], select, textarea { /*attribute selector*/
     box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 6px; 
     margin-bottom: 16px; 
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    resize: vertical /* Allow the user to vertically resize the textarea */
 }
 
 /* Submit button styling */
@@ -191,7 +191,7 @@ input[type="text"][placeholder] { /*attribute selector*/
     
 
 input[type=submit]:hover {
-    background-color: rgba(83, 82, 78, 0.7); /* Adding semi-transparent background */
+    background-color: rgba(83, 82, 78, 0.7); /*semi-transparent background */
     opacity: 0.8; /* Text effect */
 }
   /* Add a background color and some padding around the form */
@@ -251,7 +251,7 @@ input[type=submit]:hover {
     opacity: 0.8;
 }
 
-input:invalid { /*Validity Psuedo Class*/
+input:invalid { /*Validity Psuedo Class-CSS selector that applies styles based on the validation state of form elements.*/
     background-color:rgba(216, 13, 148, 0.144); /* Green border for valid input */
 }
 
@@ -295,7 +295,7 @@ input:optional{ /* Validity Psuedo Class*/
 }
 
 /* First line of hero paragraph */
-.hero p::first-line{ /*Pseudo Element*/
+.hero p::first-line{ /*Pseudo Element-allows you to style a specific part of an element, such as first letter, or a specific part of the content, without adding additional HTML.*/
     color:yellow
 }
 
@@ -348,7 +348,7 @@ h3::first-letter{ /*Pseudo Element*/
 }
 
 /* Hover effect for every third skill */
-.skill:nth-child(3n):hover { /* Nth Pseudo class*/
+.skill:nth-child(3n):hover { /* Nth Pseudo class-allows you to select elements based on their order in a group.*/
     transform: rotate(0) scale(1.1);
 }
 
@@ -457,7 +457,7 @@ h3::first-letter{ /*Pseudo Element*/
     background: #ffffff;
 }
 #blogs {
-    background:linear-gradient(black,white); /*gradient*/
+    background:linear-gradient(black,white); /*gradient-gradual transition between two or more colors*/
 }
 
 /* Blog grid layout */
@@ -543,7 +543,7 @@ h3::first-letter{ /*Pseudo Element*/
 }
 
 .blog-btn:hover {
-    background-color: rgba(104, 104, 209, 0.7); /* Adding semi-transparent background */
+    background-color: rgba(104, 104, 209, 0.7); /*semi-transparent background */
     transform: translateX(5px);
 }
 
