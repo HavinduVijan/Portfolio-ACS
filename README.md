@@ -8,7 +8,8 @@ Welcome to my ASC Coursework portfolio repository! This project showcases my ski
 - **Tools:** GitHub Pages for deployment
 - **Design:** Responsive and modern UI with a focus on user experience
 
-## You can view my portfolio live at https://havinduvijan.github.io/Portfolio-ACS/index.html.
+### You can view my portfolio live at 
+https://havinduvijan.github.io/Portfolio-ACS/index.html.
 
 Alternatively, clone this repository and open the `index.html` file in any web browser to explore the portfolio locally.
 
